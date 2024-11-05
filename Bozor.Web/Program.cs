@@ -2,7 +2,9 @@
 // Copyright (c) Coalition Of Good-Hearted Engineers
 // Free To Use To Find Comfort And Peace
 //--------------------------------------------------
+
 using Bozor.Web.Brokers.Storages;
+using Bozor.Web.Services.Foundations.Products;
 
 public class Program
 {
@@ -11,7 +13,10 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllersWithViews();
+
         builder.Services.AddTransient<IStorageBroker, StorageBroker>();
+
+        builder.Services.AddTransient<IProductService, ProductService>();
 
         var app = builder.Build();
 
@@ -23,6 +28,7 @@ public class Program
         }
 
         app.UseHttpsRedirection();
+
         app.UseStaticFiles();
 
         app.UseRouting();
