@@ -8,6 +8,7 @@ namespace Bozor.Web.Services.Foundations.Products
 {
     public interface IProductService
     {
-        ValueTask<Product> AddProductAsync(Product product);    
+        ValueTask<Product> AddProductAsync(Product product);
+        ValueTask<IQueryable<Product>> RetrieveAllProductsAsync();
     }
 }
