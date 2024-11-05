@@ -16,5 +16,8 @@ namespace Bozor.Web.Services.Foundations.Products
 
         public async ValueTask<Product> AddProductAsync(Product product) =>
             await this.storageBroker.InsertProductAsync(product);
+
+        public async ValueTask<IQueryable<Product>> RetrieveAllProductsAsync()=>
+            await this.storageBroker.SelectAllProductsAsync(); 
     }
 }

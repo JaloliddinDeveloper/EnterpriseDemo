@@ -4,15 +4,37 @@
 //--------------------------------------------------
 using System.Diagnostics;
 using Bozor.Web.Models;
+using Bozor.Web.Models.Foundations.Product;
+using Bozor.Web.Services.Foundations.Products;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bozor.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IProductService productService;
+
+        public HomeController(IProductService productService)=>
+            this.productService = productService;
+        
+        public IActionResult AddProduct()=>View();
+        
+        [HttpPost]
+        public IActionResult AddProduct(Product product)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                product.CreatedDate = DateTimeOffset.Now;
+              this.productService.AddProductAsync(product);
+                return RedirectToAction("Index");
+            }
+            return View(product);
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var products = await productService.RetrieveAllProductsAsync();
+            return View(products);
         }
 
         public IActionResult Privacy()

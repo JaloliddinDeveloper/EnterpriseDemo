@@ -1,4 +1,40 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IQueryable<Product>
+
+@{
+    ViewData["Title"] = "Product List";
 }
-<h1>Projects</h1>
+
+<div class="container mt-4">
+    <h2 class="text-center">Product List</h2>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Id</td>
+                        <td>@product.Name</td>
+                        <td>@product.Price.ToString("N2") So'm</td> 
+                        <td>@product.CreatedDate.ToString("g")</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" class="text-center">No products available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
