@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35410.144 d17.12
+VisualStudioVersion = 17.12.35410.144
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bozor.Web", "Bozor.Web\Bozor.Web.csproj", "{3EAA7E1D-5332-4923-B146-B28DBB789A4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineBazar", "OnlineBazar\OnlineBazar.csproj", "{23D94737-CC2E-4E8E-8552-EDD09B524934}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3EAA7E1D-5332-4923-B146-B28DBB789A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EAA7E1D-5332-4923-B146-B28DBB789A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EAA7E1D-5332-4923-B146-B28DBB789A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EAA7E1D-5332-4923-B146-B28DBB789A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D94737-CC2E-4E8E-8552-EDD09B524934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D94737-CC2E-4E8E-8552-EDD09B524934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D94737-CC2E-4E8E-8552-EDD09B524934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D94737-CC2E-4E8E-8552-EDD09B524934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
