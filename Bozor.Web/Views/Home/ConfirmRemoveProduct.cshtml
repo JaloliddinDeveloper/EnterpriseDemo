@@ -1,0 +1,17 @@
+﻿@model Product
+
+<h2>Bu mahsulotni o'chirishni tasdiqlaysizmi?</h2>
+<p>
+    <strong>@Model.Name</strong> <br />
+    Narxi: <strong>@Model.Price</strong>
+</p>
+
+<p>
+    Diqqat: Bu amalni bajarish orqali mahsulot ma'lumotlari doimiy ravishda o'chiriladi. O'chirishdan oldin, mahsulotni qayta tiklash mumkin emas.
+</p>
+
+<form asp-action="RemoveProduct" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">O'chirishni tasdiqlash</button>
+    <a asp-action="Index" class="btn btn-secondary">Orqaga</a>
+</form>
